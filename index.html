@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>タブレットのおやくそく</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" rel="stylesheet">
@@ -14,9 +13,20 @@
             font-family: 'M PLUS Rounded 1c', sans-serif;
             background-color: #FFFFEA;
         }
+        .card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
         .icon {
             font-size: 3rem;
             line-height: 1;
+        }
+        /* Markdownの太字を反映するためのスタイル */
+        strong, b {
+            font-weight: 800; /* M PLUS Rounded 1cのExtraBoldに相当 */
         }
     </style>
 </head>
@@ -27,86 +37,170 @@
             <h1 class="text-4xl md:text-5xl font-extrabold" style="color: #004D66;">タブレットの<span style="color: #FF5E5B;">おやくそく</span></h1>
             <p class="mt-2 text-lg" style="color: #004D66;">みんなで たのしく つかうための ルールだよ！</p>
         </header>
-
-        <div class="bg-white rounded-2xl shadow-lg p-4 md:p-6 mb-8 flex flex-col justify-center items-center text-center">
-             <h2 class="text-2xl font-bold mb-4" style="color: #004D66;">４つの だいじな おやくそく</h2>
+        
+        <!-- 導入 -->
+        <div class="card flex flex-col justify-center items-center text-center">
+             <h2 class="text-2xl font-bold mb-4" style="color: #004D66;">だいじな ６つの おやくそく</h2>
             <div class="text-4xl md:text-5xl">
                 <span class="mr-2 md:mr-4">💡</span>
+                <span class="mr-2 md:mr-4">💻</span>
                 <span class="mr-2 md:mr-4">🏃</span>
                 <span class="mr-2 md:mr-4">📸</span>
+                <span class="mr-2 md:mr-4">🌐</span>
                 <span class="mr-2 md:mr-4">🔧</span>
             </div>
-            <p class="mt-4 text-gray-600">これから出てくるお話のまとめだよ。</p>
+            <p class="mt-4 text-gray-600">これからのお話のまとめだよ。みんなでまもって、たのしくつかおうね！</p>
         </div>
         
-        <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+        <!-- 項目1: 学習のとき -->
+        <div class="card">
             <div class="flex items-center mb-4">
                 <span class="icon mr-4" style="color: #00CECB;">💡</span>
-                <h2 class="text-2xl font-bold" style="color: #004D66;">1. つかうとき</h2>
+                <h2 class="text-2xl font-bold" style="color: #004D66;">1. がくしゅうの とき</h2>
             </div>
             <ul class="space-y-4 text-lg">
-                <li class="p-4 rounded-lg" style="background-color: #E0FCFB;">
-                    <p class="font-bold">せんせいの おはなしを きく</p>
-                    <p class="text-base text-gray-700">せんせいを みて、よく きいてから つかってね。</p>
+                <li class="p-4 rounded-lg flex items-start" style="background-color: #E0FCFB;">
+                    <span class="mr-4 text-3xl">👂</span>
+                    <div>
+                        <p class="font-bold">せんせいの おはなしを きく</p>
+                        <p class="text-base text-gray-700">せんせいがおはなしをしているときは、タブレットをさわらず、せんせいをみましょう。おはなしをよくきいてから、タブレットをつかいましょう。</p>
+                    </div>
                 </li>
-                <li class="p-4 rounded-lg" style="background-color: #E0FCFB;">
-                    <p class="font-bold">やさしく つかう</p>
-                    <ul class="list-disc list-inside text-base text-gray-700 mt-2 space-y-1">
-                        <li>はこぶときは りょうてで もつ 🙌</li>
-                        <li>おもいものを のせない 🚫📚</li>
-                        <li>ぬれた てで さわらない 🚫💧</li>
-                    </ul>
+                <li class="p-4 rounded-lg flex items-start" style="background-color: #E0FCFB;">
+                    <span class="mr-4 text-3xl">📚</span>
+                    <div>
+                        <p class="font-bold">がくしゅうにかかわることだけにつかいます</p>
+                        <p class="text-base text-gray-700">タブレットは<strong>がくしゅう</strong>にかかわることだけにつかいます。ゲームはしないよ。</p>
+                    </div>
+                </li>
+                <li class="p-4 rounded-lg flex items-start" style="background-color: #E0FCFB;">
+                    <span class="mr-4 text-3xl">🗃️</span>
+                    <div>
+                        <p class="font-bold">つかわない ときは</p>
+                        <p class="text-base text-gray-700">せんせいが<strong>しじ</strong>するばしょに、きれいにしまいます。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 項目2: やさしくつかう -->
+        <div class="card">
+            <div class="flex items-center mb-4">
+                <span class="icon mr-4" style="color: #A0C4FF;">💻</span>
+                <h2 class="text-2xl font-bold" style="color: #004D66;">2. やさしく つかう</h2>
+            </div>
+            <ul class="space-y-4 text-lg">
+                <li class="p-4 rounded-lg flex items-start" style="background-color: #D1E5FF;">
+                    <span class="mr-4 text-3xl">🤲</span>
+                    <div>
+                        <p class="font-bold">やさしく もつ</p>
+                        <ul class="list-disc list-inside text-base text-gray-700 mt-2 space-y-1">
+                            <li>はこぶときは <strong>りょうて</strong>で もつ 🙌</li>
+                            <li>おもいものを のせない 🚫📚</li>
+                            <li><strong>ぬれた て</strong>で さわらない 🚫💧</li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
         </div>
         
-        <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+        <!-- 項目3: からだの ために -->
+        <div class="card">
             <div class="flex items-center mb-4">
                 <span class="icon mr-4" style="color: #FFED66;">🏃</span>
-                <h2 class="text-2xl font-bold" style="color: #004D66;">2. からだの ために</h2>
+                <h2 class="text-2xl font-bold" style="color: #004D66;">3. からだの ために</h2>
             </div>
              <ul class="space-y-4 text-lg">
                 <li class="p-4 rounded-lg" style="background-color: #FFF9C4;">
-                    <p class="font-bold">よい しせいで つかう</p>
-                    <p class="text-base text-gray-700">せすじを のばして、いすに ふかく すわろう。</p>
+                    <div class="flex flex-col md:flex-row items-center justify-between">
+                        <div class="mb-4 md:mb-0 md:mr-4 max-w-sm">
+                            <!-- 画像のパスを修正しました -->
+                            <img src="promise/assets/yoisisei.png" alt="正しい姿勢のイラスト" class="w-full h-auto rounded-lg">
+                        </div>
+                        <div>
+                            <p class="font-bold">よい しせいで つかう</p>
+                            <p class="text-base text-gray-700">せすじをのばして、いすにふかくすわろう。あしは<strong>ゆか</strong>につけてね。↔️</p>
+                        </div>
+                    </div>
                 </li>
-                <li class="p-4 rounded-lg" style="background-color: #FFF9C4;">
-                    <p class="font-bold">タブレットから はなれて みる</p>
-                    <p class="text-base text-gray-700">めが いたくならないように、かおを ちかづけないでね。↔️</p>
+                <li class="p-4 rounded-lg flex items-start" style="background-color: #FFF9C4;">
+                    <span class="mr-4 text-3xl">👀</span>
+                    <div>
+                        <p class="font-bold">めを まもる</p>
+                        <p class="text-base text-gray-700">めがいたくならないように、がめんから<strong>３０ｃｍいじょう</strong>はなれてみよう。３０ぷんに１かいはめをやすめてね。</p>
+                    </div>
                 </li>
             </ul>
         </div>
 
-        <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+        <!-- 項目4: カメラのとき -->
+        <div class="card">
             <div class="flex items-center mb-4">
                 <span class="icon mr-4" style="color: #FF5E5B;">📸</span>
-                <h2 class="text-2xl font-bold" style="color: #004D66;">3. カメラの とき</h2>
+                <h2 class="text-2xl font-bold" style="color: #004D66;">4. カメラの とき</h2>
             </div>
              <ul class="space-y-4 text-lg">
-                <li class="p-4 rounded-lg" style="background-color: #FFE2E1;">
-                    <p class="font-bold">とるまえに きょかをもらう</p>
-                    <p class="text-base text-gray-700">おともだちを とるときは「いい？」って きいてね。</p>
+                <li class="p-4 rounded-lg flex items-start" style="background-color: #FFE2E1;">
+                    <span class="mr-4 text-3xl">🗣️</span>
+                    <div>
+                        <p class="font-bold">とるまえに きょかをもらう</p>
+                        <p class="text-base text-gray-700">ひとやものをとるときは、「いい？」って<strong>きょか</strong>をもらってからとってね。</p>
+                    </div>
                 </li>
-                <li class="p-4 rounded-lg" style="background-color: #FFE2E1;">
-                    <p class="font-bold">しゃしんは たからもの</p>
-                    <p class="text-base text-gray-700">たいせつにして、しらないひとに みせないでね。💎</p>
+                <li class="p-4 rounded-lg flex items-start" style="background-color: #FFE2E1;">
+                    <span class="mr-4 text-3xl">🔒</span>
+                    <div>
+                        <p class="font-bold">しゃしんは たからもの</p>
+                        <p class="text-base text-gray-700">たいせつな<strong>たからもの</strong>です。しらないひとにみせないでね。💎</p>
+                    </div>
                 </li>
             </ul>
         </div>
 
-        <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+        <!-- 項目5: インターネット -->
+        <div class="card">
             <div class="flex items-center mb-4">
-                <span class="icon mr-4" style="color: #004D66;">🔧</span>
-                <h2 class="text-2xl font-bold" style="color: #004D66;">4. こわれたら</h2>
+                <span class="icon mr-4" style="color: #004D66;">🌐</span>
+                <h2 class="text-2xl font-bold" style="color: #004D66;">5. インターネット</h2>
             </div>
              <ul class="space-y-4 text-lg">
-                <li class="p-4 rounded-lg" style="background-color: #D1F1F0;">
-                    <p class="font-bold">すぐに せんせいに いう</p>
-                    <p class="text-base text-gray-700">おかしいなと おもったら、すぐに てを あげてね。🙋</p>
+                <li class="p-4 rounded-lg flex items-start" style="background-color: #D1F1F0;">
+                    <span class="mr-4 text-3xl">🧑‍🤝‍🧑</span>
+                    <div>
+                        <p class="font-bold">おうちのひとと はなす</p>
+                        <p class="text-base text-gray-700">こまったことや、いやなきもちになったことがあったら、すぐに<strong>おうちのひとやせんせい</strong>にそうだんしようね。</p>
+                    </div>
                 </li>
-                <li class="p-4 rounded-lg" style="background-color: #D1F1F0;">
-                    <p class="font-bold">かってに さわらない</p>
-                    <p class="text-base text-gray-700">へんな ボタンを おしたり、なかを いじったり しないでね。</p>
+                <li class="p-4 rounded-lg flex items-start" style="background-color: #D1F1F0;">
+                    <span class="mr-4 text-3xl">🔑</span>
+                    <div>
+                        <p class="font-bold">だれかに ばんごうや パスワードを おしえない</p>
+                        <p class="text-base text-gray-700">じぶんの<strong>だいじなじょうほう</strong>をぜったいにだれにもおしえないでね。🔐</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- 項目6: こしょうしたとき -->
+        <div class="card">
+            <div class="flex items-center mb-4">
+                <span class="icon mr-4" style="color: #FF7043;">🔧</span>
+                <h2 class="text-2xl font-bold" style="color: #004D66;">6. こしょうした とき</h2>
+            </div>
+            <ul class="space-y-4 text-lg">
+                <li class="p-4 rounded-lg flex items-start" style="background-color: #FFF2E6;">
+                    <span class="mr-4 text-3xl">🙋</span>
+                    <div>
+                        <p class="font-bold">すぐに せんせいに いう</p>
+                        <p class="text-base text-gray-700">おかしいなと おもったら、すぐに <strong>てを あげてね</strong>。🙋</p>
+                    </div>
+                </li>
+                <li class="p-4 rounded-lg flex items-start" style="background-color: #FFF2E6;">
+                    <span class="mr-4 text-3xl">❌</span>
+                    <div>
+                        <p class="font-bold">かってに さわらない</p>
+                        <p class="text-base text-gray-700">へんな ボタンを おしたり、なかを いじったり しないでね。</p>
+                    </div>
                 </li>
             </ul>
         </div>
